@@ -33,6 +33,7 @@ function* guessingGame() {
 		var myGuess = yield game.ask("I'm thinking of a number 1 through 100... What is it?");
 		while(isNaN(myGuess/2)){
 			myGuess = yield game.ask("You need to put in an actual number.. Guess again...");
+			colorBackground(flag);
 		}
 		while (myGuess != number){
 			if (myGuess < number){
